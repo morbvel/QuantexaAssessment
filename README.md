@@ -34,4 +34,4 @@ $ spark-submit --class quantexa.interview --master local /path/to/jar/directory/
 In order to valdiate the results, all the expected outputs will be printed as a terminal ouput.
 
   - The result should be as follows:
-![Expected Final Result](https://github.com/morbvel/AsosAsingment/blob/master/result.png)
+![Expected Final Result](https://github.com/morbvel/QuantexaAssessment/blob/main/results.png)
