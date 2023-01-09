@@ -6,7 +6,7 @@ import org.apache.spark.sql.functions.{col, lag, lit, lower, row_number, when, m
 
 object QuantexaInterviewExercise3 {
 
-  def getLongestRun(flights: DataFrame): DataFrame = {
+  def getLongestRun(flights: DataFrame): DataFrame =
 
     flights
       .transform(getStartsArriveUK)
@@ -16,7 +16,6 @@ object QuantexaInterviewExercise3 {
       .transform(getPreviousJourneyStage)
       .transform(getTotalJourneyStages)
       .groupBy("passengerId").agg(max("totalFlightsInJourney") as "totalFlightsInJourney")
-  }
 
   def getStartsArriveUK(inputDf: DataFrame): DataFrame = {
 

@@ -13,11 +13,15 @@ If cloned, code can be launched without any pre requirements.
 Otherwise, it is required to place the flight related files into the main resources directory so the process can access them.
 
 # Launch the process
+Results can be checked by running the `QuantexaInterviewMain` test class.
+Results should be printed as follows:
 
+![Expected Final Result](https://github.com/morbvel/QuantexaAssessment/blob/main/results.png)
+
+
+Also, as a maven project, it can be packaged the whole code into a single .jar file.
 As an Apache Spark process, it can be trigger with the `spark-submit` command.
-For this process, it has been used the Spark version `2.3.4`.
-In order to make the process easier to use, it has been declared one mandatory parameter: the directory mentioned above.
-As so, it is required to package the whole code into a single .jar file:
+For this process, it has been used the Spark version `2.4.8`.
 
 ```sh
 $ cd /path/to/pom.xml
@@ -31,8 +35,4 @@ Next step is just running the process with the `spark-submit` command.
 $ spark-submit --class quantexa.interview --master local /path/to/jar/directory/QuantexaInterview-0.0.1-SNAPSHOT.jar
 ```
 
-In order to valdiate the results, all the expected outputs will be printed as a terminal ouput.
-
-  - The result should be as follows:
-  
-![Expected Final Result](https://github.com/morbvel/QuantexaAssessment/blob/main/results.png)
+In order to validate the results, all the expected outputs will be printed as a terminal output.

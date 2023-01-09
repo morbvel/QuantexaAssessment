@@ -20,7 +20,7 @@ class QuantexInterviewExtraExerciseTest extends SparkTesting {
       ("3", "7", "2020-01-16")
     ).toDF("passengerId", "flightId", "date")
 
-    val results = FlightsExcercisesExtraExercise
+    val results = QuantexaInterviewExtraExercise
       .getPassengersInFlightsTogetherByDate(flights, 3, "2020-01-06", "2020-01-16")
 
     val groupedByPassenger = results

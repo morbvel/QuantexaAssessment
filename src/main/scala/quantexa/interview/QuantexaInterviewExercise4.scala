@@ -5,7 +5,7 @@ import org.apache.spark.sql.functions.{col, count, max, min}
 
 object QuantexaInterviewExercise4 {
 
-  def getPassengersInFlightsTogether(flightsDf: DataFrame, minimumOfFlightsTogether: Int): DataFrame = {
+  def getPassengersInFlightsTogether(flightsDf: DataFrame, minimumOfFlightsTogether: Int): DataFrame =
 
     flightsDf
       .transform(getRenamedPassengers)
@@ -13,7 +13,6 @@ object QuantexaInterviewExercise4 {
       .transform(getNumberOfFlightsTogether)
       .filter(col("Number of flights together") > minimumOfFlightsTogether)
       .orderBy(col("passengerId").asc)
-  }
 
   def getRenamedPassengers(inputDf: DataFrame): DataFrame =
 
